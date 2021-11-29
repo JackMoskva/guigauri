@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Павел Гигаури</title>
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Marck+Script&family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <!-- End Styles -->
+</head>
+
+<body class="secondary-page one-book">
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-1 delimiter d-none d-lg-flex flex-column align-items-center">
+          <div class="h-social-wrapper">
+            <a href="#" class="h-social-item h-social-vk">Vk</a>
+            <a href="#" class="h-social-item h-social-fb">Fb</a>
+            <a href="#" class="h-social-item h-social-inst">In</a>
+            <a class="btn-search" data-bs-toggle="offcanvas" href="#offcanvasTop" role="button"
+              aria-controls="offcanvasTop">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8.88889" cy="8.88889" r="8.38889" stroke="#252F4A" />
+                <line x1="15.1524" y1="14.4445" x2="20.0009" y2="19.2929" stroke="#252F4A" stroke-linecap="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel"
+          data-bs-backdrop="false">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+              id="offcanvasTopLabel">
+              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.919922" y="1.52588e-05" width="30" height="1" transform="rotate(45 0.919922 1.52588e-05)"
+                  fill="#151515" />
+                <rect x="21.9199" y="0.707108" width="30" height="1" transform="rotate(135 21.9199 0.707108)"
+                  fill="#151515" />
+              </svg>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="form-search-group">
+              <input type="text" class="form-search-control" placeholder="Поиск">
+              <button class="form-search-btn">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8.88889" cy="8.88889" r="8.38889" stroke="#252F4A" />
+                  <line x1="15.1524" y1="14.4445" x2="20.0009" y2="19.2929" stroke="#252F4A" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-11 pe-0 indent">
+          <div class="mobile-menu-wrapper d-flex d-lg-none">
+            <div class="header-logo-wrapper">
+              <div class="header-logo">
+                <div class="h-l-text">Павел</div>
+                <div class="h-l-infinity">
+                  <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.86 0C17.84 0 18.75 0.23 19.59 0.69C20.43 1.15 21.1 1.79 21.6 2.61C22.1 3.41 22.35 4.31 22.35 5.31C22.35 6.37 22.07 7.28 21.51 8.04C20.95 8.78 20.23 9.34 19.35 9.72C18.47 10.08 17.57 10.26 16.65 10.26C15.43 10.26 14.34 9.95 13.38 9.33C12.44 8.71 11.54 7.86 10.68 6.78C9.98 7.96 9.2 8.84 8.34 9.42C7.5 9.98 6.56 10.26 5.52 10.26C4.54 10.26 3.63 10.03 2.79 9.57C1.95 9.11 1.27 8.47 0.75 7.65C0.25 6.83 0 5.92 0 4.92C0 3.86 0.28 2.96 0.84 2.22C1.4 1.48 2.12 0.93 3 0.57C3.88 0.19 4.8 0 5.76 0C7.02 0 8.13 0.31 9.09 0.929999C10.05 1.53 10.95 2.36 11.79 3.42C12.49 2.28 13.24 1.43 14.04 0.87C14.86 0.29 15.8 0 16.86 0ZM6.36 9.09C7.06 9.09 7.74 8.83 8.4 8.31C9.06 7.79 9.66 7.08 10.2 6.18C10 5.9 9.61 5.33 9.03 4.47C8.17 3.17 7.45 2.22 6.87 1.62C6.31 1.02 5.71 0.719999 5.07 0.719999C4.47 0.719999 4 1.01 3.66 1.59C3.34 2.15 3.18 2.97 3.18 4.05C3.18 5.49 3.46 6.69 4.02 7.65C4.6 8.61 5.38 9.09 6.36 9.09ZM17.31 9.54C17.93 9.54 18.4 9.25 18.72 8.67C19.04 8.09 19.2 7.27 19.2 6.21C19.2 4.77 18.91 3.57 18.33 2.61C17.77 1.65 17 1.17 16.02 1.17C14.66 1.17 13.4 2.12 12.24 4.02C12.48 4.38 12.71 4.72 12.93 5.04C13.15 5.34 13.35 5.63 13.53 5.91C14.35 7.17 15.02 8.09 15.54 8.67C16.08 9.25 16.67 9.54 17.31 9.54Z"
+                      fill="#C78E5B" />
+                  </svg>
+                </div>
+                <div class="h-l-text">Гигаури</div>
+              </div>
+              <div class="h-l-official">
+                <div class="h-l-official-line"></div>
+                <div class="h-l-official-text">Официальный сайт</div>
+              </div>
+            </div>
+            <div class="mobile-menu">
+              <div class="burger-button">
+                <div class="burger-button__stick"></div>
+                <div class="burger-button__stick"></div>
+                <div class="burger-button__stick"></div>
+              </div>
+              <div class="main-menu">
+                <div class="form-search-group">
+                  <input type="text" class="form-search-control" placeholder="Поиск">
+                  <button class="form-search-btn">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8.88889" cy="8.88889" r="8.38889" stroke="#252F4A" />
+                      <line x1="15.1524" y1="14.4445" x2="20.0009" y2="19.2929" stroke="#252F4A"
+                        stroke-linecap="round" />
+                    </svg>
+                  </button>
+                </div>
+                <nav class="nav flex-column d-flex d-lg-none">
+                  <a class="nav-link" href="index.html">
+                    <span>Главная</span>
+                  </a>
+                  <a class="nav-link" href="about.html">
+                    <span>Об авторе</span>
+                  </a>
+                  <a class="nav-link" href="books.html">
+                    <span>Книги</span>
+                  </a>
+                  <a class="nav-link" href="blog.html">
+                    <span>Блог</span>
+                  </a>
+                  <a class="nav-link" href="news.html">
+                    <span>Новости</span>
+                  </a>
+                  <a class="nav-link" href="reviews.html">
+                    <span>Рецензии</span>
+                  </a>
+                  <a class="nav-link" href="contact.html">
+                    <span>Контакты</span>
+                  </a>
+                </nav>
+                <div class="h-social-wrapper">
+                  <a href="#" class="h-social-item h-social-vk">Vk</a>
+                  <a href="#" class="h-social-item h-social-fb">Fb</a>
+                  <a href="#" class="h-social-item h-social-inst">In</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-banner sec-banner">
+            <div class="header-logo-wrapper d-none d-lg-block">
+              <div class="header-logo">
+                <div class="h-l-text">Павел</div>
+                <div class="h-l-infinity">
+                  <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.86 0C17.84 0 18.75 0.23 19.59 0.69C20.43 1.15 21.1 1.79 21.6 2.61C22.1 3.41 22.35 4.31 22.35 5.31C22.35 6.37 22.07 7.28 21.51 8.04C20.95 8.78 20.23 9.34 19.35 9.72C18.47 10.08 17.57 10.26 16.65 10.26C15.43 10.26 14.34 9.95 13.38 9.33C12.44 8.71 11.54 7.86 10.68 6.78C9.98 7.96 9.2 8.84 8.34 9.42C7.5 9.98 6.56 10.26 5.52 10.26C4.54 10.26 3.63 10.03 2.79 9.57C1.95 9.11 1.27 8.47 0.75 7.65C0.25 6.83 0 5.92 0 4.92C0 3.86 0.28 2.96 0.84 2.22C1.4 1.48 2.12 0.93 3 0.57C3.88 0.19 4.8 0 5.76 0C7.02 0 8.13 0.31 9.09 0.929999C10.05 1.53 10.95 2.36 11.79 3.42C12.49 2.28 13.24 1.43 14.04 0.87C14.86 0.29 15.8 0 16.86 0ZM6.36 9.09C7.06 9.09 7.74 8.83 8.4 8.31C9.06 7.79 9.66 7.08 10.2 6.18C10 5.9 9.61 5.33 9.03 4.47C8.17 3.17 7.45 2.22 6.87 1.62C6.31 1.02 5.71 0.719999 5.07 0.719999C4.47 0.719999 4 1.01 3.66 1.59C3.34 2.15 3.18 2.97 3.18 4.05C3.18 5.49 3.46 6.69 4.02 7.65C4.6 8.61 5.38 9.09 6.36 9.09ZM17.31 9.54C17.93 9.54 18.4 9.25 18.72 8.67C19.04 8.09 19.2 7.27 19.2 6.21C19.2 4.77 18.91 3.57 18.33 2.61C17.77 1.65 17 1.17 16.02 1.17C14.66 1.17 13.4 2.12 12.24 4.02C12.48 4.38 12.71 4.72 12.93 5.04C13.15 5.34 13.35 5.63 13.53 5.91C14.35 7.17 15.02 8.09 15.54 8.67C16.08 9.25 16.67 9.54 17.31 9.54Z"
+                      fill="#C78E5B" />
+                  </svg>
+                </div>
+                <div class="h-l-text">Гигаури</div>
+              </div>
+              <div class="h-l-official">
+                <div class="h-l-official-line"></div>
+                <div class="h-l-official-text">Официальный сайт</div>
+              </div>
+            </div>
+            <div class="sec-banner-content">
+              <nav class="nav flex-column d-none d-lg-flex">
+                <a class="nav-link" href="index.html">
+                  <span>Главная</span>
+                </a>
+                <a class="nav-link" href="about.html">
+                  <span>Об авторе</span>
+                </a>
+                <a class="nav-link" href="books.html">
+                  <span>Книги</span>
+                </a>
+                <a class="nav-link" href="blog.html">
+                  <span>Блог</span>
+                </a>
+                <a class="nav-link" href="news.html">
+                  <span>Новости</span>
+                </a>
+                <a class="nav-link" href="reviews.html">
+                  <span>Рецензии</span>
+                </a>
+                <a class="nav-link" href="contact.html">
+                  <span>Контакты</span>
+                </a>
+              </nav>
+              <h1 class="sec-title wow animate__animated animate__fadeInLeft">
+                <span class="s-t-name">Всё о</span>
+                <span class="s-t-surname">книге</span>
+              </h1>
+            </div>
+            <div class="main-signature-wrapper">
+              <img src="img/signature.png" alt="Signature" class="main-signature">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- One Book -->
+  <section class="m-new-book-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-1 delimiter d-none d-lg-flex flex-column align-items-center">
+          <h4 class="title-left">Соб@чий глюк</h4>
+        </div>
+        <div class="col-12 col-lg-11 indent">
+          <div class="m-new-book-wrapper wow animate__animated animate__fadeInUp">
+            <div class="books-img-wrapper">
+              <img src="img/book-1.png" alt="Book" class="books-img">
+            </div>
+            <div class="m-new-book-info">
+              <h2 class="title-block">Собачий глюк</h2>
+              <p class="about-text">
+                По стечению самых банальных обстоятельств, вирус обычной простуды оказался скрещенным с собачьей и
+                человеческой ДНК, а также с особой прошивкой - компьютерным глюком. В результате образовывается новый
+                вид компьютерно-животного вируса, от которого глючит не компьютеры, а зависающих в Интернете людей.
+                Интернет-гуру Артем случайно оказался источником нового вируса, и он же стал единственной надеждой на
+                спасение особачивающегося человечества. Артем способен на многое. Но сможет ли он победить в себе
+                собаку? Вопрос человеческой или собачьей жизни: либо Артем, либо соб@чий глюк.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1 delimiter d-none d-lg-flex flex-column align-items-center"></div>
+        <div class="col-12 col-lg-11 indent">
+          <div class="quote-book-wrapper wow animate__animated animate__fadeInUp">
+            <div class="quote-book-info">
+              <h2 class="title-block">Цитата из книги</h2>
+              <p class="about-text">
+                Лабиринты московских улиц хранят множество тайн исторического масштаба и просто мелких житейских
+                секретов своих обитателей. К последним относится происхождение Собакина. Трудно сказать, какая порода,
+                точнее, смешение каких пород породило моего пса, – московские улицы надежно хранят эту тайну. Это
+                оказался настоящий кот в мешке. Я взял Собакина, не предполагая, какого размера пес вырастет из
+                лохматого комочка.
+              </p>
+            </div>
+            <div class="quote-book-img-wrapper">
+              <img src="img/book-picture.jpg" alt="Book" class="quote-book-img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1 delimiter d-none d-lg-flex flex-column align-items-center"></div>
+        <div class="col-12 col-lg-11 indent">
+          <div class="buy-wrapper">
+            <div class="buy-info">
+              <h2 class="title-block wow animate__animated animate__fadeInUp">Где купить</h2>
+              <ul class="shops-list">
+                <li class="shop-list-item wow animate__animated animate__fadeInLeft">
+                  <a href="https://www.moscowbooks.ru/" class="shop-list-link stretched-link" target="_blank">
+                    <span class="shop-list-link-price">от 299 ₽</span>
+                    <span class="shop-list-link-name">
+                      moscowbooks.ru
+                    </span>
+                  </a>
+                  <span class="shop-list-arrow">
+                    <svg width="112" height="14" viewBox="0 0 112 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="4.37114e-08" y1="7.35352" x2="111" y2="7.35353" stroke="#C78E5B" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M106 0.853478L111.5 6.85352C111.695 7.04878 111.695 7.65813 111.5 7.85339L106 13.8535C105.805 14.0488 105.488 14.0488 105.293 13.8535C105.098 13.6582 105.098 13.3417 105.293 13.1464L110 7.85339L110 6.85339L105.293 1.56058C105.098 1.36532 105.098 1.04874 105.293 0.853478C105.488 0.658216 105.805 0.658216 106 0.853478Z"
+                        fill="#C78E5B" />
+                    </svg>
+                  </span>
+                </li>
+                <li class="shop-list-item wow animate__animated animate__fadeInLeft">
+                  <a href="https://www.labirint.ru/" class="shop-list-link stretched-link" target="_blank">
+                    <span class="shop-list-link-price">от 369 ₽</span>
+                    <span class="shop-list-link-name">
+                      labirint.ru
+                    </span>
+                  </a>
+                  <span class="shop-list-arrow">
+                    <svg width="112" height="14" viewBox="0 0 112 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="4.37114e-08" y1="7.35352" x2="111" y2="7.35353" stroke="#C78E5B" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M106 0.853478L111.5 6.85352C111.695 7.04878 111.695 7.65813 111.5 7.85339L106 13.8535C105.805 14.0488 105.488 14.0488 105.293 13.8535C105.098 13.6582 105.098 13.3417 105.293 13.1464L110 7.85339L110 6.85339L105.293 1.56058C105.098 1.36532 105.098 1.04874 105.293 0.853478C105.488 0.658216 105.805 0.658216 106 0.853478Z"
+                        fill="#C78E5B" />
+                    </svg>
+                  </span>
+                </li>
+                <li class="shop-list-item wow animate__animated animate__fadeInLeft">
+                  <a href="http://litres.ru/" class="shop-list-link stretched-link" target="_blank">
+                    <span class="shop-list-link-price">от 299 ₽</span>
+                    <span class="shop-list-link-name">
+                      litres.ru
+                    </span>
+                  </a>
+                  <span class="shop-list-arrow">
+                    <svg width="112" height="14" viewBox="0 0 112 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="4.37114e-08" y1="7.35352" x2="111" y2="7.35353" stroke="#C78E5B" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M106 0.853478L111.5 6.85352C111.695 7.04878 111.695 7.65813 111.5 7.85339L106 13.8535C105.805 14.0488 105.488 14.0488 105.293 13.8535C105.098 13.6582 105.098 13.3417 105.293 13.1464L110 7.85339L110 6.85339L105.293 1.56058C105.098 1.36532 105.098 1.04874 105.293 0.853478C105.488 0.658216 105.805 0.658216 106 0.853478Z"
+                        fill="#C78E5B" />
+                    </svg>
+                  </span>
+                </li>
+                <li class="shop-list-item wow animate__animated animate__fadeInLeft">
+                  <a href="http://ozon.ru/" class="shop-list-link stretched-link" target="_blank">
+                    <span class="shop-list-link-price">от 358 ₽</span>
+                    <span class="shop-list-link-name">
+                      ozon.ru
+                    </span>
+                  </a>
+                  <span class="shop-list-arrow">
+                    <svg width="112" height="14" viewBox="0 0 112 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="4.37114e-08" y1="7.35352" x2="111" y2="7.35353" stroke="#C78E5B" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M106 0.853478L111.5 6.85352C111.695 7.04878 111.695 7.65813 111.5 7.85339L106 13.8535C105.805 14.0488 105.488 14.0488 105.293 13.8535C105.098 13.6582 105.098 13.3417 105.293 13.1464L110 7.85339L110 6.85339L105.293 1.56058C105.098 1.36532 105.098 1.04874 105.293 0.853478C105.488 0.658216 105.805 0.658216 106 0.853478Z"
+                        fill="#C78E5B" />
+                    </svg>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End One Book -->
+
+  <!-- Footer -->
+  <footer class="footer wow animate__animated animate__fadeInUp">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-1 delimiter d-none d-lg-flex flex-column align-items-center"></div>
+        <div class="col-12 col-lg-11 indent">
+          <div class="footer-content">
+            <div class="header-logo">
+              <div class="h-l-text">Павел</div>
+              <div class="h-l-infinity">
+                <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.86 0C17.84 0 18.75 0.23 19.59 0.69C20.43 1.15 21.1 1.79 21.6 2.61C22.1 3.41 22.35 4.31 22.35 5.31C22.35 6.37 22.07 7.28 21.51 8.04C20.95 8.78 20.23 9.34 19.35 9.72C18.47 10.08 17.57 10.26 16.65 10.26C15.43 10.26 14.34 9.95 13.38 9.33C12.44 8.71 11.54 7.86 10.68 6.78C9.98 7.96 9.2 8.84 8.34 9.42C7.5 9.98 6.56 10.26 5.52 10.26C4.54 10.26 3.63 10.03 2.79 9.57C1.95 9.11 1.27 8.47 0.75 7.65C0.25 6.83 0 5.92 0 4.92C0 3.86 0.28 2.96 0.84 2.22C1.4 1.48 2.12 0.93 3 0.57C3.88 0.19 4.8 0 5.76 0C7.02 0 8.13 0.31 9.09 0.929999C10.05 1.53 10.95 2.36 11.79 3.42C12.49 2.28 13.24 1.43 14.04 0.87C14.86 0.29 15.8 0 16.86 0ZM6.36 9.09C7.06 9.09 7.74 8.83 8.4 8.31C9.06 7.79 9.66 7.08 10.2 6.18C10 5.9 9.61 5.33 9.03 4.47C8.17 3.17 7.45 2.22 6.87 1.62C6.31 1.02 5.71 0.719999 5.07 0.719999C4.47 0.719999 4 1.01 3.66 1.59C3.34 2.15 3.18 2.97 3.18 4.05C3.18 5.49 3.46 6.69 4.02 7.65C4.6 8.61 5.38 9.09 6.36 9.09ZM17.31 9.54C17.93 9.54 18.4 9.25 18.72 8.67C19.04 8.09 19.2 7.27 19.2 6.21C19.2 4.77 18.91 3.57 18.33 2.61C17.77 1.65 17 1.17 16.02 1.17C14.66 1.17 13.4 2.12 12.24 4.02C12.48 4.38 12.71 4.72 12.93 5.04C13.15 5.34 13.35 5.63 13.53 5.91C14.35 7.17 15.02 8.09 15.54 8.67C16.08 9.25 16.67 9.54 17.31 9.54Z"
+                    fill="#C78E5B"></path>
+                </svg>
+              </div>
+              <div class="h-l-text">Гигаури</div>
+            </div>
+            <div class="h-l-official">
+              <div class="h-l-official-text">Официальный сайт</div>
+              <div class="h-l-official-line"></div>
+              <div class="f-o-infinity">
+                <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.86 0C17.84 0 18.75 0.23 19.59 0.69C20.43 1.15 21.1 1.79 21.6 2.61C22.1 3.41 22.35 4.31 22.35 5.31C22.35 6.37 22.07 7.28 21.51 8.04C20.95 8.78 20.23 9.34 19.35 9.72C18.47 10.08 17.57 10.26 16.65 10.26C15.43 10.26 14.34 9.95 13.38 9.33C12.44 8.71 11.54 7.86 10.68 6.78C9.98 7.96 9.2 8.84 8.34 9.42C7.5 9.98 6.56 10.26 5.52 10.26C4.54 10.26 3.63 10.03 2.79 9.57C1.95 9.11 1.27 8.47 0.75 7.65C0.25 6.83 0 5.92 0 4.92C0 3.86 0.28 2.96 0.84 2.22C1.4 1.48 2.12 0.93 3 0.57C3.88 0.19 4.8 0 5.76 0C7.02 0 8.13 0.31 9.09 0.929999C10.05 1.53 10.95 2.36 11.79 3.42C12.49 2.28 13.24 1.43 14.04 0.87C14.86 0.29 15.8 0 16.86 0ZM6.36 9.09C7.06 9.09 7.74 8.83 8.4 8.31C9.06 7.79 9.66 7.08 10.2 6.18C10 5.9 9.61 5.33 9.03 4.47C8.17 3.17 7.45 2.22 6.87 1.62C6.31 1.02 5.71 0.719999 5.07 0.719999C4.47 0.719999 4 1.01 3.66 1.59C3.34 2.15 3.18 2.97 3.18 4.05C3.18 5.49 3.46 6.69 4.02 7.65C4.6 8.61 5.38 9.09 6.36 9.09ZM17.31 9.54C17.93 9.54 18.4 9.25 18.72 8.67C19.04 8.09 19.2 7.27 19.2 6.21C19.2 4.77 18.91 3.57 18.33 2.61C17.77 1.65 17 1.17 16.02 1.17C14.66 1.17 13.4 2.12 12.24 4.02C12.48 4.38 12.71 4.72 12.93 5.04C13.15 5.34 13.35 5.63 13.53 5.91C14.35 7.17 15.02 8.09 15.54 8.67C16.08 9.25 16.67 9.54 17.31 9.54Z"
+                    fill="#C78E5B"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="copyright-wrapper">
+              <span class="copyright-text">
+                © 2021 Павел Гигуари. Все права защищены.
+              </span>
+              <span class="copyright-text">
+                Использование материалов сайта разрешено только с предварительного согласия правообладателя
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- End Scripts -->
+</body>
+
+</html>
